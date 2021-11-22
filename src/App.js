@@ -1,30 +1,37 @@
 import logo from './logo.svg';
 import './App.css';
+import HelloWorld from './components/HelloWorld';
+import SayMayName from './components/SayMyName';
+import Pessoa from './components/Pessoa';
+import List from './components/List'
+import Evento from './components/Evento'
+import Form from './components/Form';
+import Condicional from './components/Condicional';
 
 function maiuscula(name){
    return name.toUpperCase();
 }
 
 function App() {
-
-const name = 'Rodrigo Navas';
-
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Olá, {maiuscula(name)}
-        </a>
-      </header>
+          <HelloWorld></HelloWorld>
+          <SayMayName nome={maiuscula("Rodrigo Navas")}></SayMayName>
+          <Pessoa 
+             foto="https://via.placeholder.com/150" 
+             alt="Rodrigo Navas"
+             nome="Rodrigo Navas"
+             profissao= "Analista de Sistemas"
+             idade="30 Anos">
+          </Pessoa>
+
+          <List></List>
+
+          <Evento></Evento>
+
+          <Form></Form>
+
+          <Condicional></Condicional>
     </div>
   );
 }
